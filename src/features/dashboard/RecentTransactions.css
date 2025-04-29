@@ -1,0 +1,116 @@
+/* RecentTransactions Styling */
+.recent-transactions ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.recent-transactions li {
+  position: relative;
+  display: flex;
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
+  margin-bottom: var(--spacing-sm);
+  background-color: white;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-speed) var(--transition-easing),
+              box-shadow var(--transition-speed) var (--transition-easing);
+}
+
+.recent-transactions li:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.transaction-type-indicator {
+  width: 4px;
+  background-color: var(--primary-color);
+}
+
+.income .transaction-type-indicator {
+  background-color: var(--success-color);
+}
+
+.expense .transaction-type-indicator {
+  background-color: var(--danger-color);
+}
+
+.transaction-content {
+  flex-grow: 1;
+  padding: var(--spacing-md);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.transaction-info {
+  flex-grow: 1;
+}
+
+.transaction-text {
+  margin: 0 0 var(--spacing-xs) 0;
+  font-size: var(--font-size-md);
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.transaction-meta {
+  display: flex;
+  gap: var(--spacing-sm);
+  align-items: center;
+}
+
+.transaction-category {
+  background-color: var(--background-color);
+  color: var(--text-secondary);
+  font-size: var(--font-size-xs);
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-weight: 500;
+}
+
+.transaction-date {
+  font-size: var(--font-size-xs);
+  color: var(--text-secondary);
+}
+
+.transaction-amount {
+  font-weight: bold;
+  font-size: var(--font-size-md);
+  white-space: nowrap;
+}
+
+.expense .transaction-amount {
+  color: var(--danger-color);
+}
+
+.income .transaction-amount {
+  color: var(--success-color);
+}
+
+/* Empty state styling */
+.empty-transactions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-xl) 0;
+  color: var(--text-secondary);
+}
+
+.empty-icon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: var(--spacing-md);
+  opacity: 0.5;
+}
+
+.empty-message {
+  font-weight: 500;
+  margin-bottom: var(--spacing-xs);
+}
+
+.empty-description {
+  font-size: var(--font-size-sm);
+  margin: 0;
+}

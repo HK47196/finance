@@ -1,0 +1,114 @@
+/* Keep App.css minimal if most styles are global or component-specific */
+/* You can add styles specific to the App layout here if needed */
+
+/* App Layout Styling */
+.app-container {
+  display: flex;
+  height: 100vh; /* Full viewport height */
+  overflow: hidden; /* Prevent sidebar from creating scrollbars */
+}
+
+.main-content {
+  margin-left: 240px; /* Offset content for fixed sidebar */
+  width: calc(100% - 240px); /* Calculate remaining width (100% - sidebar) */
+  height: 100vh;
+  padding: var(--spacing-xl);
+  background-color: var(--background-color);
+  overflow-y: auto; /* Single scrollbar for main content */
+  box-sizing: border-box;
+}
+
+.page-header {
+  margin-bottom: var(--spacing-xl);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.page-title {
+  font-size: var(--font-size-xxl);
+  font-weight: 700;
+  margin: 0;
+  color: var(--text-primary);
+}
+
+.page-actions {
+  display: flex;
+  gap: var(--spacing-md);
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-xl);
+}
+
+.dashboard-grid .card {
+  margin-bottom: 0;
+}
+
+.dashboard-double-width {
+  grid-column: span 2;
+}
+
+/* Transaction section styling */
+.transaction-section {
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-xl);
+}
+
+.transaction-page {
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  gap: var(--spacing-lg);
+}
+
+/* Make transaction section two columns on larger screens */
+@media (min-width: 900px) {
+  .transaction-section {
+    grid-template-columns: 3fr 2fr; /* Transaction list gets more space */
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .dashboard-double-width {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 992px) {
+  .transaction-section,
+  .transaction-page {
+    grid-template-columns: 1fr;
+  }
+  
+  .main-content {
+    padding: var(--spacing-lg);
+  }
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    margin-left: 64px; /* Adjust for collapsed sidebar on small screens */
+    width: calc(100% - 64px); /* Calculate width based on percentage instead of viewport */
+  }
+  
+  .main-content {
+    padding: var(--spacing-md);
+  }
+  
+  .page-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-md);
+  }
+  
+  .page-actions {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}

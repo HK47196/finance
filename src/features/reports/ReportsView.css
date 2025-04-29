@@ -1,0 +1,82 @@
+/* Styles for ReportsView component */
+.reports-view {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-large);
+}
+
+.report-content {
+  padding: var(--spacing-medium);
+  /* Remove text-align: center if table is used */
+  color: var(--color-text-secondary);
+}
+
+/* Styles for the monthly summary table */
+.monthly-summary-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: var(--spacing-medium);
+}
+
+.monthly-summary-table th,
+.monthly-summary-table td {
+  padding: var(--spacing-small) var(--spacing-medium);
+  text-align: left;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.monthly-summary-table th {
+  background-color: var(--color-background-secondary);
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.monthly-summary-table td {
+  color: var(--color-text-secondary);
+}
+
+.monthly-summary-table .income {
+  color: var(--color-success);
+}
+
+.monthly-summary-table .expense {
+  color: var(--color-danger);
+}
+
+.monthly-summary-table .positive {
+  color: var(--color-success);
+}
+
+.monthly-summary-table .negative {
+  color: var(--color-danger);
+}
+
+/* Align numeric columns to the right */
+.monthly-summary-table th:not(:first-child),
+.monthly-summary-table td:not(:first-child) {
+  text-align: right;
+}
+
+/* Interactive table features */
+.monthly-summary-table tbody tr {
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.monthly-summary-table tbody tr:hover {
+  background-color: rgba(0, 0, 0, 0.03);
+}
+
+.monthly-summary-table tbody tr.selected-month {
+  background-color: var(--color-primary-light);
+  font-weight: 500;
+}
+
+/* Chart instructions */
+.chart-instructions {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  font-style: italic;
+  margin-bottom: var(--spacing-medium);
+  text-align: center;
+}

@@ -1,0 +1,38 @@
+.settings-view {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-medium);
+}
+
+.setting-item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: var(--spacing-medium);
+}
+
+.setting-item label {
+  font-weight: 500;
+  margin-bottom: var(--spacing-small);
+}
+
+.setting-item select,
+.setting-item button {
+  margin-top: var(--spacing-small);
+  padding: var(--spacing-small) var(--spacing-medium);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  background: var(--color-background);
+  color: var(--color-text-primary);
+}
+
+.setting-description {
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+  margin-top: var(--spacing-small);
+}
+
+.about-section {
+  padding: var(--spacing-medium);
+  color: var(--color-text-secondary);
+  text-align: center;
+}

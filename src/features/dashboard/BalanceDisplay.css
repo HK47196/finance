@@ -1,0 +1,66 @@
+.balance-display {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  padding: var(--spacing-md);
+  height: 100%;
+}
+
+.balance-display h2 {
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  font-size: 1.2em;
+}
+
+.balance-display p {
+  font-size: 2em;
+  font-weight: bold;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+.balance-icon {
+  width: 48px;
+  height: 48px;
+  background-color: rgba(58, 134, 255, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-color);
+}
+
+.balance-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.balance-content {
+  flex-grow: 1;
+}
+
+.balance-label {
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-top: 0;
+}
+
+.balance-amount {
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+}
+
+.balance-amount.positive {
+  color: var(--success-color);
+}
+
+.balance-amount.negative {
+  color: var(--danger-color);
+}

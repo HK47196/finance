@@ -1,0 +1,72 @@
+.quick-summary {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  height: 100%;
+}
+
+.summary-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius-md);
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.summary-item.income {
+  border-left: 3px solid var(--success-color);
+}
+
+.summary-item.expense {
+  border-left: 3px solid var(--danger-color);
+}
+
+.summary-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.income .summary-icon {
+  background-color: rgba(46, 204, 113, 0.1);
+  color: var(--success-color);
+}
+
+.expense .summary-icon {
+  background-color: rgba(231, 76, 60, 0.1);
+  color: var(--danger-color);
+}
+
+.summary-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.summary-content {
+  flex-grow: 1;
+}
+
+.summary-label {
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+  margin: 0 0 var(--spacing-xs) 0;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.summary-amount {
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+}
+
+.income .summary-amount {
+  color: var(--success-color);
+}
+
+.expense .summary-amount {
+  color: var(--danger-color);
+}

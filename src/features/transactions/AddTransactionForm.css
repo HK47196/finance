@@ -1,0 +1,163 @@
+/* Styles specific to the AddTransactionForm */
+/* Most form styling is handled globally in index.css */
+
+.add-transaction-form h3 {
+    margin-top: 20px; /* Add some space above the form title */
+}
+
+/* AddTransactionForm Styling */
+.add-transaction {
+  width: 100%;
+}
+
+.transaction-type-selector {
+  display: flex;
+  margin-bottom: var(--spacing-md);
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+}
+
+.type-option {
+  flex: 1;
+}
+
+.type-option label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-sm) var(--spacing-md);
+  cursor: pointer;
+  transition: all var(--transition-speed) var(--transition-easing);
+  background-color: var(--card-bg-color);
+  color: var(--text-secondary);
+  font-weight: 500;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.type-option label svg {
+  width: 18px;
+  height: 18px;
+}
+
+.type-option.active label {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.type-option:first-child.active label {
+  background-color: var(--danger-color);
+}
+
+.type-option:last-child.active label {
+  background-color: var(--success-color);
+}
+
+.form-fields {
+  margin-bottom: var(--spacing-md);
+}
+
+.form-control {
+  margin-bottom: var(--spacing-md);
+}
+
+.form-control label {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-xs);
+  font-weight: 500;
+}
+
+.form-control label svg {
+  width: 18px;
+  height: 18px;
+  opacity: 0.7;
+}
+
+.form-control input,
+.form-control select {
+  width: 100%;
+  padding: var(--spacing-md);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-md);
+  font-size: var(--font-size-md);
+  background-color: var(--card-bg-color);
+  color: var(--text-primary);
+  transition: all var(--transition-speed) var(--transition-easing);
+}
+
+.form-control input:focus,
+.form-control select:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(var(--primary-color-rgb), 0.2);
+  outline: none;
+}
+
+.amount-input {
+  position: relative;
+  display: flex;
+}
+
+.currency-symbol {
+  position: absolute;
+  left: var(--spacing-md);
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.amount-input input {
+  padding-left: calc(var(--spacing-md) + 12px);
+}
+
+/* Button styling */
+.btn {
+  width: 100%;
+  padding: var(--spacing-md);
+  border: none;
+  border-radius: var(--border-radius-md);
+  font-size: var(--font-size-md);
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  transition: all var(--transition-speed) var(--transition-easing);
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn svg {
+  width: 18px;
+  height: 18px;
+}
+
+.btn-success {
+  background-color: var(--success-color);
+}
+
+.btn-danger {
+  background-color: var(--danger-color);
+}
+
+/* Fix for date input in different browsers */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity var(--transition-speed) var(--transition-easing);
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator:hover {
+  opacity: 1;
+}

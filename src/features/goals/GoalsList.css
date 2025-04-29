@@ -1,0 +1,152 @@
+.goals-list {
+  width: 100%;
+}
+
+.goal-card {
+  background: var(--card-bg);
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  border: 1px solid var(--border-color);
+}
+
+.goal-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.goal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.goal-title h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.goal-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.icon-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.icon-button svg {
+  width: 18px;
+  height: 18px;
+}
+
+.icon-button.edit {
+  color: var(--primary-color);
+}
+
+.icon-button.delete {
+  color: var(--danger-color);
+}
+
+.icon-button:hover.edit {
+  background-color: rgba(var(--primary-rgb), 0.1);
+}
+
+.icon-button:hover.delete {
+  background-color: rgba(var(--danger-rgb), 0.1);
+}
+
+.emoji-icon {
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+.goal-tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  padding: 2px 8px;
+  border-radius: 12px;
+  margin-top: 4px;
+  font-weight: 500;
+  background-color: var(--tag-bg);
+}
+
+.goal-tag.savings {
+  color: #2563eb;
+  background-color: rgba(37, 99, 235, 0.1);
+}
+
+.goal-tag.retirement {
+  color: #7c3aed;
+  background-color: rgba(124, 58, 237, 0.1);
+}
+
+.goal-tag.purchase {
+  color: #ea580c;
+  background-color: rgba(234, 88, 12, 0.1);
+}
+
+.goal-tag.debt {
+  color: #dc2626;
+  background-color: rgba(220, 38, 38, 0.1);
+}
+
+.goal-tag.education {
+  color: #16a34a;
+  background-color: rgba(22, 163, 74, 0.1);
+}
+
+.goal-tag.travel {
+  color: #0891b2;
+  background-color: rgba(8, 145, 178, 0.1);
+}
+
+.goal-details {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  font-size: 0.9rem;
+}
+
+.goal-amount p, .goal-date p {
+  margin: 4px 0;
+  color: var(--text-secondary);
+}
+
+.amount {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.days-left {
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.goal-notes {
+  margin-top: 12px;
+  font-size: 0.85rem;
+  font-style: italic;
+  color: var(--text-secondary);
+  border-top: 1px solid var(--border-color);
+  padding-top: 8px;
+}
+
+/* Empty state styles */
+.empty-state-emoji {
+  font-size: 3rem;
+  margin-bottom: 16px;
+  display: block;
+}
